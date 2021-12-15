@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PizzeriaProjekt.main;
 
 namespace PizzeriaProjekt
 {
@@ -26,9 +27,8 @@ namespace PizzeriaProjekt
             switch (listBox1.SelectedIndex)
             {
                 case 0:
-                    Console.WriteLine("test");
-                    Pizza pizza1 = new Pizza();
-                    listBox2.Items.Add("test");
+                    Pizza pizza = new Pizza();
+                    listBox2.Items.Add(pizza.ReturnName());
                         //.ObjectCollection.Add(Pizza());
                     return;
             }
