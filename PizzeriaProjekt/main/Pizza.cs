@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace PizzeriaProjekt.main
 {
-    public class Pizza
+    public class Food
     {
-        private string name = "Pizza";
-        private double price = 5.00;
+        private string name;
+        private double price;
         Dictionary<string, double> ingredients = new Dictionary<string, double>();
-        public Pizza() { }
-        public Pizza(Dictionary<string, double> ingredients)
+        public Food(string name, double price) 
         {
-            this.name = name + "with ";
+            this.name = name;
+            this.price = price;
+        }
+        public Food(string name, double price, Dictionary<string, double> ingredients)
+        {
+            this.name = name + " with ";
+            this.price = price;
             foreach (KeyValuePair<string, double> ingredient in ingredients)
             {
                 this.name += ingredient.Key + ", ";
